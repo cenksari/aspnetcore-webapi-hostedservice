@@ -8,8 +8,9 @@
 	public abstract class HostedService : IHostedService, IDisposable
 	{
 		private Task currentTask;
-		private readonly CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
-		
+
+		private readonly CancellationTokenSource cancellationTokenSource = new();
+
 		protected abstract Task ExecuteAsync(CancellationToken token);
 
 		public virtual Task StartAsync(CancellationToken cancellationToken)

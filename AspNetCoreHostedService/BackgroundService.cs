@@ -11,7 +11,7 @@
 		{
 			while (!token.IsCancellationRequested)
 			{
-				Trace.WriteLine($"{DateTime.Now.ToString("dd MMMM yyyy, dddd - HH:mm:ss")} - Background job started");
+				Trace.WriteLine($"{DateTime.Now:dd MMMM yyyy, dddd - HH:mm:ss} - Background job started");
 
 				await Task.Delay(TimeSpan.FromSeconds(15), token);
 			}

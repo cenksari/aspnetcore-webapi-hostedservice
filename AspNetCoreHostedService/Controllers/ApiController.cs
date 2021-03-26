@@ -7,9 +7,9 @@
 	public class ApiController : Controller
 	{
 		[HttpGet]
-		public JsonResult Status()
+		public IActionResult Status()
 		{
-			return Json(new { status = true, message = "Background service started.", date = DateTime.Now });
+			return Ok(new { status = true, message = "Background service started.", date = DateTime.Now });
 		}
 	}
 }
